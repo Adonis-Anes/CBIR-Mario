@@ -10,7 +10,7 @@ El presente trabajo describe el proceso completo llevado a cabo, desde la selecc
 
 ## 2. Ejecución
 
-### 2.0 Creación del entorno virtual (Opcional)
+### 2.0 Creación del entorno virtual
 
 Se recomienda crear un nuevo entorno virtual de Python, ya sea con anaconda o con otra herramienta. De esta forma evitamos posibles conflictos de librerías y otros problemas.
 
@@ -20,13 +20,23 @@ A través del comando `pip install -r requeriments.txt` se instalarán todas las
 
 ### 2.2 Ejecución de la aplicación
 
-Para ejecutar la aplicación hemos desarrollado 2 formas distintas, una a través del archivo `main.py` y otra a través de `ui/app.py`. 
+#### 2.2.1 Si tu entorno virtual ha sido creado con Anaconda
 
-#### 2.2.1 Ejecución de la aplicación a través de `main.py`
+Si tu entorno virtual ha sido creado con anaconda tienes dos opciones:
+
+##### A Ejecución de la aplicación a través de `main.py`
 Ejecutando en la consola `python main.py` se abrirá la interfaz del proyecto, pudiendo acceder a partes como el reentrenamiento de la red, la extracción de características o la reconstrucción de la base de datos. **Esto último es necesario aplicarlo al menos la 1º vez que quieres ejecutar la aplicación**. También podrás correr la aplicación desde ese menú.
 
-#### 2.2.2 Ejecución de la aplicación a través de `ui/app.py`
+##### B Ejecución de la aplicación a través de `ui/app.py`
 Ejecutando por consola el comando `python -m streamlit run ui/app.py` se lanzará la aplicación sin necesidad de pasar por el menú del proyecto. 
+
+#### 2.2.1 Si tu entorno virtual no ha sido creado con Anaconda
+
+Si no has empleado anaconda ejecuta la aplicación con el siguiente comando:
+
+` .\env\Scripts\python.exe -m streamlit run ui/app.py`
+
+Sustituye env por el nombre de tu entorno virtual
 
 ## 3. Descripción del sistema de ficheros
 1. `database/`: Contiene el archivo `db.csv` que relaciona los índices con las imágenes en local. También contiene los 5 índices generados.
